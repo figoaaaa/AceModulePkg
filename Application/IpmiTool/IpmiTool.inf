@@ -1,0 +1,35 @@
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = IpmiTool
+  FILE_GUID                      = D2067508-70D5-4085-9075-84E5AAD50A4C
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 0.1
+  ENTRY_POINT                    = ShellCEntryLib
+
+[Sources]
+  IpmiTool.c
+  IpmiTool.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  AceModulePkg/AceModulePkg.dec
+  ShellPkg/ShellPkg.dec
+  
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  ShellCEntryLib
+  UefiLib
+  PcdLib
+  IpmiLib
+  IoLib
+
+[Protocols]
+
+[FeaturePcd]
+
+[Pcd]
